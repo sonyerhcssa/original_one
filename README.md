@@ -1,24 +1,70 @@
-# README
+# アプリケーション名
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ORIGINAL_ONE
 
-Things you may want to cover:
+# アプリケーション概要
 
-* Ruby version
+webから診察の予約ができます
 
-* System dependencies
+# URL
 
-* Configuration
+未設定
 
-* Database creation
+# テスト用アカウント
 
-* Database initialization
+未設定
 
-* How to run the test suite
+# 利用方法
 
-* Services (job queues, cache servers, search engines, etc.)
+未設定
 
-* Deployment instructions
+# アプリケーションを作成した背景
 
-* ...
+診療所で長時間の診察待ちをした自分自身の経験から、診察待ちを解消できるアプリの制作を考えました。
+
+# 洗い出した要件
+
+要件を定義したシート
+
+# 実装した機能についての画像やGIFおよびその説明
+
+~画像やGIF、説明を記載~
+
+# 実装予定の機能
+
+カレンダーから直接予約が出来る機能
+
+## users テーブル
+
+| Column             | Type        | Options                        |
+| ------------------ | ----------- | ------------------------------ |
+| email              | string      | null: false, unique: true      |
+| password           | string      | null: false                    |
+| first_name         | string      | null: false                    |
+| last_name          | string      | null: false                    |
+| first_name_kana    | string      | null: false                    |
+| last_name_kana     | string      | null: false                    |
+| birth_day          | data        | null: false                    |
+| phone_number       | string      | null: false                    |
+| address            | string      | null: false                    |
+
+### Association
+- has_many :reserves
+
+
+## reserves
+
+| Column             | Type        | Options                        |
+| ------------------ | ----------- | ------------------------------ |
+| reserve_data       | data        | null: false                    |
+| user               | references  | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+
+
+## comments テーブル
+
+| Column             | Type        | Options                        |
+| ------------------ | ----------- | ------------------------------ |
+| comment            | string      | null: false                    |
