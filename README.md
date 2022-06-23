@@ -28,11 +28,18 @@ webから診察の予約ができます
 
 # 実装した機能についての画像やGIFおよびその説明
 
-~画像やGIF、説明を記載~
+画像やGIF、説明を記載
 
 # 実装予定の機能
 
 カレンダーから直接予約が出来る機能
+
+# データベース設計
+
+[![Image from Gyazo](https://i.gyazo.com/8ad4ca6ace86606bedcc8dc21d2db398.png)](https://gyazo.com/8ad4ca6ace86606bedcc8dc21d2db398)
+
+# 画面遷移図
+
 
 ## users テーブル
 
